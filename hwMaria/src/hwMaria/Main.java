@@ -26,7 +26,17 @@ public class Main {
             System.out.println("finally used");
         }
         
-        MyClass.f();
+        try {
+            MyClass.f();
+        }catch(Exception e) {
+            System.out.println('\n');
+        }
+        
+        try {
+            MyThirdTask.foo();
+        }catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
     
 }
